@@ -1,11 +1,13 @@
 package biz;
 
-import com.servlet.model.BizProcessor;
+import com.servlet.annotation.BizService;
 import org.json.JSONObject;
 
-public class Test implements BizProcessor {
 
-    @Override
+@BizService(name = "test")
+public class Test {
+
+
     public JSONObject execute(JSONObject params) {
 
         params.put("test", "test1111");
